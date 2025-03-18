@@ -15,3 +15,6 @@ Para ejecutar el proyecto localmente es necesario seguir los siguientes pasos:
 pip install -r requirements.txt
 ingresar a la subcarpeta dentro del proyecto, webscraping y ejecutar por terminal el siguiente comando
 scrapy crawl pagina12 -a palabra_clave="milei", o la palabra por la que se desee filtrar
+Para ejecutarlo, utilizando Docker, se deben ejecutar los siguientes comando por consola:
+-docker build -t pagina12 . (para crear el contenedor)
+-docker run --rm -v "$(pwd):/app" pagina12 -a palabra_clave=milei (correrlo, indicando la palabra clave buscada)
